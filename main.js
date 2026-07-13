@@ -88,7 +88,8 @@ function loadReleases(repo, box){
     rels=rels||[];
     if(!rels.length){ box.innerHTML='<p class="rel-empty">아직 릴리스가 없어요.</p>'; return; }
     box.innerHTML=rels.map(function(r){
-      var body=esc((r.body||"").trim());
+      var raw=(r.body||"").trim().replace(/\*\*/g,"").replace(/^#{1,6}\s+/gm,"").replace(/\r/g,"");
+      var body=esc(raw);
       if(body.length>700) body=body.slice(0,700)+"…";
       return '<div class="rel"><div class="rel-h"><span class="rel-tag">'+esc(r.tag_name||r.name||"")+'</span>'
         +(r.prerelease?'<span class="rel-pre">pre-release</span>':'')
