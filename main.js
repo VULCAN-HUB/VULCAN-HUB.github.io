@@ -62,6 +62,27 @@ window.closeDetail=function(){
 };
 document.addEventListener("keydown",function(e){if(e.key==="Escape")window.closeDetail();});
 
+function renderMarquee(){
+  var track=document.getElementById("marquee-track");
+  if(!track||!window.PROGRAMS||!window.PROGRAMS.length) return;
+  var chip=function(p){
+    return '<div class="mq-chip"><img src="'+p.icon+'" alt="" onerror="this.style.visibility=\'hidden\'"><span>'+p.name+'</span></div>';
+  };
+  var setHTML='<div class="mq-set">'+window.PROGRAMS.map(chip).join("")+'</div>';
+  function layout(){
+    track.innerHTML=setHTML;                                 // one set to measure
+    var setW=track.firstElementChild.getBoundingClientRect().width;
+    if(!setW){ requestAnimationFrame(layout); return; }      // not laid out yet -> retry next frame
+    var need=Math.max(2, Math.ceil((window.innerWidth*2)/setW)+1); // fill >=2x viewport for seamless loop
+    var html=""; for(var i=0;i<need;i++) html+=setHTML;
+    track.innerHTML=html;
+    track.style.setProperty("--mq-shift", setW+"px");        // shift by one set => seamless
+    track.style.setProperty("--mq-dur", Math.max(16,(setW/50)).toFixed(1)+"s"); // ~50px/s
+  }
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(layout);} else {layout();}
+  var t; window.addEventListener("resize",function(){clearTimeout(t);t=setTimeout(layout,250);},{passive:true});
+}
+
 document.addEventListener("DOMContentLoaded", function(){
   setHref("lnk-yt", window.LINKS.youtube);
   setHref("lnk-gh", window.LINKS.github);
@@ -70,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function(){
   setHref("f-yt", window.LINKS.youtube);
   setHref("f-gh", window.LINKS.github);
   renderCatalog();
+  renderMarquee();
   initReveal();
 });
 
