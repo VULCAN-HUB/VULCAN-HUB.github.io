@@ -22,7 +22,54 @@
     </div>
   </header>
 
-  <main id="top"></main>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-in">
+        <p class="eyebrow">Desktop tools by Unknown</p>
+        <h1 class="hero-title">필요한 도구를,<br>설치 없이 바로.</h1>
+        <p class="hero-sub">사진·드라이브·파일 작업을 위한 가벼운 데스크톱 프로그램.
+          전부 무료, 단일 실행 파일.</p>
+        <div class="hero-cta">
+          <a class="btn btn-accent" href="#catalog">프로그램 보기 ↓</a>
+          <a class="btn btn-ghost" id="hero-yt" href="#" target="_blank" rel="noopener">YouTube 채널</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalog">
+      <div class="wrap">
+        <h2 class="sec-title">프로그램</h2>
+        <div class="grid" id="program-grid"></div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="wrap about-in">
+        <h2 class="sec-title">만든 사람</h2>
+        <p class="about-lead"><strong>Unknown</strong> — 혼자 쓰기 불편했던 작업을
+          직접 프로그램으로 만들어 무료로 공개합니다. 제작 과정과 사용법은 유튜브에 올립니다.</p>
+        <a class="btn btn-accent" id="about-yt" href="#" target="_blank" rel="noopener">YouTube @unknown8563</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap fbar">
+      <span>© 2026 Unknown</span>
+      <nav class="fnav">
+        <a id="f-yt" href="#" target="_blank" rel="noopener">YouTube</a>
+        <a id="f-gh" href="#" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="modal" id="detail-modal" hidden>
+    <div class="modal-backdrop" onclick="closeDetail()"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="md-name">
+      <button class="modal-x" onclick="closeDetail()" aria-label="닫기">✕</button>
+      <div id="md-body"></div>
+    </div>
+  </div>
 
   <script src="programs.js"></script>
   <script src="main.js"></script>
