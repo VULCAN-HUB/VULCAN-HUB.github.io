@@ -32,3 +32,15 @@ a:hover{color:var(--accent-hover)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hbar{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:9px;color:var(--ink);font-weight:800;letter-spacing:.04em}
+.brand-mark{color:var(--accent)}
+.hnav{display:flex;align-items:center;gap:20px;font-size:14px}
+.hnav a{color:var(--body)} .hnav a:hover{color:var(--ink)}
+.theme-btn{background:none;border:1px solid var(--line);color:var(--body);width:34px;height:34px;
+  border-radius:9px;cursor:pointer;font-size:15px}
+.theme-btn:hover{border-color:var(--accent);color:var(--accent)}

@@ -10,3 +10,10 @@
     localStorage.setItem(KEY,next);
   };
 })();
+
+function setHref(id, url){var e=document.getElementById(id); if(e) e.href=url;}
+
+document.addEventListener("DOMContentLoaded", function(){
+  setHref("lnk-yt", window.LINKS.youtube);
+  setHref("lnk-gh", window.LINKS.github);
+});
