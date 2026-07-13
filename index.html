@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#F3F4F7" media="(prefers-color-scheme:light)">
   <link rel="preload" href="assets/fonts/Pretendard-subset.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/SpaceGrotesk-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20260713d">
+  <link rel="stylesheet" href="style.css?v=20260713e">
   <link rel="icon" href="favicon.svg">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 </head>
@@ -27,6 +27,8 @@
         <span class="brand-word">VULCAN·HUB</span>
       </a>
       <nav class="hnav">
+        <a class="hnav-anchor" href="#catalog">프로그램</a>
+        <a class="hnav-anchor" href="#requests">의뢰</a>
         <a id="lnk-yt" href="#" target="_blank" rel="noopener">YouTube</a>
         <a id="lnk-gh" href="#" target="_blank" rel="noopener">GitHub</a>
         <button class="theme-btn" onclick="toggleTheme()" aria-label="테마 전환">◑</button>
@@ -59,6 +61,20 @@
       </div>
     </section>
 
+    <section class="requests" id="requests">
+      <div class="wrap">
+        <div class="req-head">
+          <div>
+            <h2 class="sec-title">프로그램 의뢰</h2>
+            <p class="req-sub">“이런 프로그램이 있으면 좋겠어요”를 남겨주세요. 다른 분들의 의뢰에 👍를 눌러 힘을 실어줄 수도 있어요.
+              <span class="req-note">의뢰 작성에는 무료 GitHub 계정이 필요합니다. 보기·추천은 누구나 가능해요.</span></p>
+          </div>
+          <a class="btn btn-accent" id="req-new" href="#" target="_blank" rel="noopener">의뢰 남기기 ↗</a>
+        </div>
+        <div class="req-list" id="req-list"><p class="req-empty">불러오는 중…</p></div>
+      </div>
+    </section>
+
     <section class="about" id="about">
       <div class="wrap about-in">
         <h2 class="sec-title">만든 사람</h2>
@@ -87,7 +103,7 @@
     </div>
   </div>
 
-  <script src="programs.js?v=20260713d"></script>
-  <script src="main.js?v=20260713d"></script>
+  <script src="programs.js?v=20260713e"></script>
+  <script src="main.js?v=20260713e"></script>
 </body>
 </html>

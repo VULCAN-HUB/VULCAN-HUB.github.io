@@ -1,0 +1,25 @@
+name: 프로그램 의뢰
+description: 이런 프로그램이 있으면 좋겠어요 — 아이디어를 남겨주세요.
+title: "[의뢰] "
+labels: ["request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        만들면 좋을 프로그램 아이디어를 자유롭게 적어주세요. 다른 분들이 👍로 추천할 수 있어요.
+  - type: textarea
+    id: idea
+    attributes:
+      label: 어떤 프로그램을 원하세요?
+      description: 무엇을 해주는 프로그램인지 한두 줄로 적어주세요.
+      placeholder: "예) 촬영 날짜별로 사진을 자동으로 폴더 정리해주는 프로그램"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: 어떤 상황에서 필요한가요? (선택)
+      description: 어떤 작업을 하다가 불편했는지 알려주시면 만들 때 큰 도움이 돼요.
+      placeholder: "예) 사진 정리를 손으로 하다 보니 시간이 오래 걸려요."
+    validations:
+      required: false
