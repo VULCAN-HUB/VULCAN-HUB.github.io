@@ -1,3 +1,7 @@
+@font-face{font-family:"Pretendard";src:url("assets/fonts/PretendardVariable.woff2") format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url("assets/fonts/SpaceGrotesk-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url("assets/fonts/JetBrainsMono-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+
 :root{
   color-scheme: dark light;
   --bg:#0E1116; --surface:#171B22; --raise:#1C2230;
@@ -5,9 +9,9 @@
   --accent:#3D6BFF; --accent-hover:#5A80FF; --on-accent:#fff;
   --good:#3FB980; --warn:#E0A63C; --hold:#7C818B;
   --radius:14px; --maxw:1120px;
-  --sans:-apple-system,"Segoe UI",system-ui,"Pretendard",Arial,sans-serif;
-  --mono:ui-monospace,"JetBrains Mono","Cascadia Code",Consolas,monospace;
-  --display:var(--sans);
+  --sans:"Pretendard",-apple-system,"Segoe UI",system-ui,Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"Cascadia Code",Consolas,monospace;
+  --display:"Space Grotesk","Pretendard",-apple-system,"Segoe UI",sans-serif;
 }
 :root[data-theme="light"]{
   --bg:#F3F4F7; --surface:#FFFFFF; --raise:#F7F8FA;
@@ -38,6 +42,7 @@ a:hover{color:var(--accent-hover)}
   backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .hbar{display:flex;align-items:center;justify-content:space-between;height:60px}
 .brand{display:flex;align-items:center;gap:9px;color:var(--ink);font-weight:800;letter-spacing:.04em}
+.brand-word{font-family:var(--display)}
 .brand-mark{color:var(--accent)}
 .hnav{display:flex;align-items:center;gap:20px;font-size:14px}
 .hnav a{color:var(--body)} .hnav a:hover{color:var(--ink)}
