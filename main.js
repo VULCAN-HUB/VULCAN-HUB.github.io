@@ -69,4 +69,28 @@ document.addEventListener("DOMContentLoaded", function(){
   setHref("f-yt", window.LINKS.youtube);
   setHref("f-gh", window.LINKS.github);
   renderCatalog();
+  initReveal();
 });
+
+function initReveal(){
+  if(matchMedia("(prefers-reduced-motion:reduce)").matches) return; // leave visible, no animation
+  var els=[].slice.call(document.querySelectorAll(".card,.about-in,.hero-in"));
+  els.forEach(function(el){el.classList.add("reveal");});
+  function show(el){el.classList.add("in");}
+  function showInView(){
+    els.forEach(function(el){
+      if(el.classList.contains("in")) return;
+      if(el.getBoundingClientRect().top < window.innerHeight*0.95) show(el);
+    });
+  }
+  showInView(); // reveal above-the-fold immediately (doesn't rely on IO timing)
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(en){ if(en.isIntersecting){show(en.target);io.unobserve(en.target);} });
+    },{threshold:.12});
+    els.forEach(function(el){ if(!el.classList.contains("in")) io.observe(el); });
+  }
+  window.addEventListener("scroll", showInView, {passive:true});
+  // safety: if transitions are throttled/frozen (e.g. background tab), force visible without relying on the transition clock
+  setTimeout(function(){els.forEach(function(el){el.classList.remove("reveal");});}, 1500);
+}

@@ -102,3 +102,7 @@ a:hover{color:var(--accent-hover)}
 .md-spec{display:grid;grid-template-columns:90px 1fr;gap:8px 14px;font-size:14px;margin:0 0 22px}
 .md-spec dt{color:var(--muted)} .md-spec dd{margin:0;color:var(--ink)}
 .md-actions{display:flex;gap:10px}
+
+/* scroll reveal */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.reveal.in{opacity:1;transform:none}
