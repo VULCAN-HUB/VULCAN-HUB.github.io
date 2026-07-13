@@ -43,6 +43,7 @@ window.openDetail=function(id){
   document.getElementById("md-body").innerHTML=''
     +'<h3 id="md-name" class="md-name">'+p.name+' <span class="badge '+statusClass(p.status)+'">'+p.status+'</span></h3>'
     +'<p class="md-tag">'+p.tagline+'</p>'
+    +((p.shots&&p.shots.length)?'<img class="md-shot" src="'+p.shots[0]+'" alt="'+p.name+' 실행 화면" onerror="this.remove()">':'')
     +'<p class="md-desc">'+p.description+'</p>'
     +'<dl class="md-spec">'
     +'<dt>버전</dt><dd class="mono">'+p.version+'</dd>'

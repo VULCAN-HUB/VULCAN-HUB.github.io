@@ -4,7 +4,7 @@ window.PROGRAMS = [
     tagline:"오프라인 드라이브 파일 카탈로그",
     description:"드라이브를 스캔해 오프라인에서도 검색·중복탐지·색상태그·CSV/HTML 내보내기. APFS·HFS+ 맥 드라이브 읽기, 볼륨 일련번호 기반 식별.",
     icon:"assets/icons/logmapping.png",
-    shots:["assets/shots/logmapping-1.png"],
+    shots:[],
     version:"BETA Ver-0.1", status:"베타",
     platforms:[{os:"Windows 10/11", note:"WebView2 런타임 필요"}],
     tech:"C#", requirements:"Windows 10/11 64-bit · 관리자 권한(디스크 스캔)",

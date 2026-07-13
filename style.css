@@ -103,6 +103,7 @@ a:hover{color:var(--accent-hover)}
 .modal-x{position:absolute;top:14px;right:14px;background:none;border:none;color:var(--muted);font-size:16px;cursor:pointer}
 .md-name{color:var(--ink);font-size:24px;margin:0 0 4px;display:flex;align-items:center;gap:10px}
 .md-tag{color:var(--accent);margin:0 0 12px}
+.md-shot{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px;margin:0 0 16px}
 .md-desc{color:var(--body);margin:0 0 18px}
 .md-spec{display:grid;grid-template-columns:90px 1fr;gap:8px 14px;font-size:14px;margin:0 0 22px}
 .md-spec dt{color:var(--muted)} .md-spec dd{margin:0;color:var(--ink)}
