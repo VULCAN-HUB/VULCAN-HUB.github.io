@@ -31,6 +31,17 @@ window.PROGRAMS = [
     platforms:[{os:"Windows", note:""},{os:"macOS", note:"준비 중"}],
     tech:"Python · PyQt5", requirements:"Windows 10/11 64-bit",
     repo:"PickOne"
+  },
+  {
+    id:"backupsafe", name:"BackupSafe",
+    tagline:"메모리카드 백업 무결성 검증",
+    description:"메모리카드 촬영본을 여러 위치로 동시 백업 → SHA-256 해시로 정상·누락·손상 검증 → 전부 정상일 때만 '포맷해도 안전' 안내. 검증 후 촬영일(EXIF) 기준 일괄 이름변경까지 한 번에.",
+    icon:"assets/icons/backupsafe.png",
+    shots:[],
+    version:"BETA Ver-0.1", status:"베타",
+    platforms:[{os:"Windows 10/11 64-bit", note:""},{os:"macOS", note:"준비 중"}],
+    tech:"Electron · Node.js", requirements:"Windows 10/11 64-bit · 무설치 포터블",
+    repo:"BackupSafe"
   }
 ];
 window.LINKS = {
