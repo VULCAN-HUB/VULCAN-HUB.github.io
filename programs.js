@@ -58,6 +58,9 @@ window.PROGRAMS = [
 window.LINKS = {
   youtube:"https://www.youtube.com/@unknown8563",
   github:"https://github.com/VULCAN-HUB",
-  releaseUrl:function(repo){return "https://github.com/VULCAN-HUB/"+repo+"/releases/latest";},
+  // ⚠️ pre-release는 /releases/latest 로 안 잡힌다(→ 목록으로 302). JS 미동작 시 폴백으로
+  //    최소한 릴리스 목록(자산 포함)이 보이도록 /releases 를 쓴다. 정상 경로는 main.js 가
+  //    Releases API로 pre-release 포함 최신 릴리스의 실제 파일 URL을 찾아 링크를 교체한다.
+  releaseUrl:function(repo){return "https://github.com/VULCAN-HUB/"+repo+"/releases";},
   issuesUrl:function(repo){return "https://github.com/VULCAN-HUB/"+repo+"/issues";}
 };
