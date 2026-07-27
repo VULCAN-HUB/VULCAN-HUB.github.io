@@ -87,6 +87,8 @@ a:hover{color:var(--accent-hover)}
 @keyframes mq-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-1 * var(--mq-shift,600px)))}}
 @media (prefers-reduced-motion:reduce){
   .marquee-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}
+  /* JS가 이미 세트를 복제해 둔 경우에도 첫 세트만 보이게 한다(복제분이 줄바꿈돼 여러 줄로 쌓이는 것 방지) */
+  .marquee-track > .mq-set:not(:first-child){display:none}
   .marquee-band::before,.marquee-band::after{display:none}
 }
 
