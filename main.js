@@ -154,14 +154,12 @@ function renderMarquee(){
     return '<div class="mq-chip"><img src="'+p.icon+'" alt="" onerror="this.style.visibility=\'hidden\'"><span>'+p.name+'</span></div>';
   };
   var setHTML='<div class="mq-set">'+window.PROGRAMS.map(chip).join("")+'</div>';
-  // 동작 줄이기(접근성 "애니메이션 효과 끄기")가 켜진 환경에서는 애니메이션 대신 한 세트만 보여준다.
-  // 이때도 세트를 복제하면, CSS의 reduced-motion 폴백(flex-wrap:wrap)과 겹쳐 여러 줄로 쌓여 보인다(실제 발생).
-  var reduced = matchMedia("(prefers-reduced-motion:reduce)").matches;
+  // 오너 지시(2026-07-28): 동작 줄이기 설정과 무관하게 **모든 PC에서 흐르게** 한다.
+  // (CSS 쪽에서도 reduced-motion일 때 마퀴 애니메이션만 !important로 되살린다)
   function layout(){
     track.innerHTML=setHTML;                                 // one set to measure
     var setW=track.firstElementChild.getBoundingClientRect().width;
     if(!setW){ requestAnimationFrame(layout); return; }      // not laid out yet -> retry next frame
-    if(reduced) return;                                      // 복제하지 않음 — 한 세트만 표시
     var need=Math.max(2, Math.ceil((window.innerWidth*2)/setW)+1); // fill >=2x viewport for seamless loop
     var html=""; for(var i=0;i<need;i++) html+=setHTML;
     track.innerHTML=html;

@@ -85,11 +85,14 @@ a:hover{color:var(--accent-hover)}
 .mq-chip span{font-family:var(--sans);color:var(--muted);font-weight:650;font-size:15px;letter-spacing:.01em}
 .mq-chip:hover span{color:var(--ink)}
 @keyframes mq-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-1 * var(--mq-shift,600px)))}}
+/* 오너 지시(2026-07-28): 프로그램 마퀴는 **모든 PC에서 흐르게** 한다.
+   위쪽 전역 규칙이 reduced-motion일 때 *{animation:none!important} 로 모든 애니메이션을 끄므로,
+   마퀴만 같은 !important 로 되살린다(다른 요소의 동작 줄이기 존중은 그대로 유지). */
 @media (prefers-reduced-motion:reduce){
-  .marquee-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}
-  /* JS가 이미 세트를 복제해 둔 경우에도 첫 세트만 보이게 한다(복제분이 줄바꿈돼 여러 줄로 쌓이는 것 방지) */
-  .marquee-track > .mq-set:not(:first-child){display:none}
-  .marquee-band::before,.marquee-band::after{display:none}
+  .marquee-track{animation:mq-scroll linear infinite!important;
+    animation-duration:var(--mq-dur,28s)!important;
+    flex-wrap:nowrap;justify-content:flex-start;width:max-content}
+  .marquee-band:hover .marquee-track{animation-play-state:paused!important}
 }
 
 /* catalog */
