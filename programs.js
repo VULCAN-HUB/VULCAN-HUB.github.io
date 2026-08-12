@@ -16,7 +16,7 @@ window.PROGRAMS = [
     description:"자동 밝기 보정 + 보정 5종 + 크롭 + 일괄 변환. RAW 8종 및 일반 6종 → JPEG/PNG/TIFF/WebP/BMP. 리사이즈·DPI·EXIF·프리셋.",
     icon:"assets/icons/rawbaker.png",
     shots:["assets/shots/rawbaker-1.png"],
-    version:"BETA Ver-0.2", status:"베타",
+    version:"BETA Ver-0.1", status:"베타",
     platforms:[{os:"Windows 10/11 64-bit", note:""}],
     tech:"Python · PyQt5", requirements:"Windows 10/11 64-bit",
     repo:"RawBaker"
@@ -49,7 +49,7 @@ window.PROGRAMS = [
     description:"버튼 한 번으로 네 컷 촬영 → 자동 합성 → QR로 즉시 전달. 손님이 대기 화면에서 프레임 디자인을 직접 고르고, 템플릿의 사진 자리는 자동 인식됩니다. 움직이는 4컷(GIF/MP4)도 함께 제공. 사진은 운영 PC 안에서만 처리되어 외부 서버로 나가지 않습니다.",
     icon:"assets/icons/snapstamp.png",
     shots:["assets/shots/snapstamp-1.png"],
-    version:"BETA Ver-0.1", status:"베타",
+    version:"BETA Ver-0.2", status:"베타",
     platforms:[{os:"Windows 10/11 64-bit", note:""},{os:"macOS", note:"준비 중"}],
     tech:"Python · PyQt5", requirements:"Windows 10/11 64-bit · USB 웹캠 · 손님용 Wi-Fi(인터넷 회선 불필요) · 보조 모니터 권장",
     repo:"SnapStamp"
