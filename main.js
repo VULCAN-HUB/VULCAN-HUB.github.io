@@ -31,7 +31,7 @@ function renderCatalog(){
     +'  <div class="card-meta"><span class="mono">'+p.version+'</span>'
     +'    <span class="mono">'+p.platforms.map(function(x){return x.os;}).join(" · ")+'</span></div>'
     +'  <div class="card-actions">'
-    +'    <a class="btn btn-accent btn-sm" data-dl="'+p.repo+'" href="'+window.LINKS.releaseUrl(p.repo)+'" target="_blank" rel="noopener">다운로드 ↓</a>'
+    +'    <a class="btn btn-accent btn-sm" data-dl="'+p.repo+'" '+dlAttrs(p)+'>다운로드 ↓</a>'
     +'    <button class="btn btn-ghost btn-sm" onclick="openDetail(\''+p.id+'\')">자세히</button>'
     +'  </div>'
     +'</article>';
@@ -52,7 +52,7 @@ window.openDetail=function(id){
     +'<dt>기술</dt><dd>'+p.tech+'</dd>'
     +'</dl>'
     +'<div class="md-actions">'
-    +'<a class="btn btn-accent" data-dl="'+p.repo+'" href="'+window.LINKS.releaseUrl(p.repo)+'" target="_blank" rel="noopener">다운로드 ↓</a>'
+    +'<a class="btn btn-accent" data-dl="'+p.repo+'" '+dlAttrs(p)+'>다운로드 ↓</a>'
     +'<a class="btn btn-ghost" href="'+window.LINKS.issuesUrl(p.repo)+'" target="_blank" rel="noopener">오류 신고</a>'
     +'</div>'
     +'<div class="md-updates"><h4 class="md-uh">업데이트 내역</h4><div id="md-rel" class="md-rel"><p class="rel-empty">불러오는 중…</p></div></div>';
@@ -103,6 +103,11 @@ function loadReleases(repo, box){
 /* 다운로드 링크 해결 — /releases/latest 는 pre-release를 못 잡으므로(→ 목록으로 302),
    Releases API로 pre-release 포함 최신 릴리스의 실제 파일 URL을 찾아 링크를 교체한다.
    loadReleases 와 같은 API 경로를 써서 캐시를 공유한다(추가 요청 없음). */
+// 초기 href: programs.js에 직링크(download)가 있으면 API 없이도 바로 받는다. 없으면 Releases 목록.
+// 이후 patchDownloads가 API로 최신 자산을 찾으면 그걸로 덮는다.
+function dlAttrs(p){
+  return p.download ? 'href="'+esc(p.download)+'"' : 'href="'+window.LINKS.releaseUrl(p.repo)+'" target="_blank" rel="noopener"';
+}
 function bestDownload(rel){
   if(!rel) return null;
   var a=rel.assets||[];
