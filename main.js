@@ -31,7 +31,7 @@ function renderCatalog(){
     +'  <div class="card-meta"><span class="mono">'+p.version+'</span>'
     +'    <span class="mono">'+p.platforms.map(function(x){return x.os;}).join(" · ")+'</span></div>'
     +'  <div class="card-actions">'
-    +'    <a class="btn btn-accent btn-sm" data-dl="'+p.repo+'" '+dlAttrs(p)+'>다운로드 ↓</a>'
+    +'    <a class="btn btn-accent btn-sm" data-dl="'+p.repo+'" '+dlAttrs(p)+'>'+esc(p.downloadLabel||'다운로드 ↓')+'</a>'
     +'    <button class="btn btn-ghost btn-sm" onclick="openDetail(\''+p.id+'\')">자세히</button>'
     +'  </div>'
     +'</article>';
@@ -52,7 +52,9 @@ window.openDetail=function(id){
     +'<dt>기술</dt><dd>'+p.tech+'</dd>'
     +'</dl>'
     +'<div class="md-actions">'
-    +'<a class="btn btn-accent" data-dl="'+p.repo+'" '+dlAttrs(p)+'>다운로드 ↓</a>'
+    +'<a class="btn btn-accent" data-dl="'+p.repo+'" '+dlAttrs(p)+'>'+esc(p.downloadLabel||'다운로드 ↓')+'</a>'
+    +(p.sourceDownload?'<a class="btn btn-ghost" href="'+esc(p.sourceDownload)+'">Mac 빌드용 / 소스 ZIP</a>':'')
+    +(p.guide?'<a class="btn btn-ghost" href="'+esc(p.guide)+'" target="_blank" rel="noopener">기기 테스트 안내</a>':'')
     +'<a class="btn btn-ghost" href="'+window.LINKS.issuesUrl(p.repo)+'" target="_blank" rel="noopener">오류 신고</a>'
     +'</div>'
     +'<div class="md-updates"><h4 class="md-uh">업데이트 내역</h4><div id="md-rel" class="md-rel"><p class="rel-empty">불러오는 중…</p></div></div>';
@@ -104,7 +106,7 @@ function loadReleases(repo, box){
    Releases API로 pre-release 포함 최신 릴리스의 실제 파일 URL을 찾아 링크를 교체한다.
    loadReleases 와 같은 API 경로를 써서 캐시를 공유한다(추가 요청 없음). */
 // 초기 href: programs.js에 직링크(download)가 있으면 API 없이도 바로 받는다. 없으면 Releases 목록.
-// 이후 patchDownloads가 API로 최신 자산을 찾으면 그걸로 덮는다.
+// 명시한 직링크는 고정한다. 소스 ZIP이나 오래된 API 캐시로 바꾸지 않는다.
 function dlAttrs(p){
   return p.download ? 'href="'+esc(p.download)+'"' : 'href="'+window.LINKS.releaseUrl(p.repo)+'" target="_blank" rel="noopener"';
 }
@@ -121,6 +123,8 @@ function patchDownloads(root){
   if(!links.length) return;
   [].forEach.call(links, function(a){
     var repo=a.getAttribute("data-dl");
+    var program=window.PROGRAMS.find(function(p){return p.repo===repo;});
+    if(program && program.download){a.href=program.download;a.removeAttribute("target");return;}
     ghGet("repos/"+GH_OWNER+"/"+repo+"/releases?per_page=10", 15).then(function(rels){
       if(!rels||!rels.length) return;                 // 폴백(/releases) 유지
       var rel=rels.filter(function(r){return !r.draft;})[0]||rels[0]; // API는 최신순

@@ -13,14 +13,18 @@ window.PROGRAMS = [
   },
   {
     id:"rawbaker", name:"RawBaker",
-    tagline:"RAW·이미지 변환 데스크톱 앱",
-    description:"자동 밝기 보정 + 보정 5종 + 크롭 + 일괄 변환. RAW 8종 및 일반 6종 → JPEG/PNG/TIFF/WebP/BMP. 리사이즈·DPI·EXIF·프리셋.",
+    tagline:"일괄 변환·사진 보정·레이어 디자인",
+    description:"Editor 0.25 기기 테스트 버전. 비파괴 사진 보정, 여러 문서와 레이어, 마스크·변형, 프로젝트 저장·복구 및 일괄 출력. Windows ZIP을 풀고 RawBaker.exe를 실행하세요. Mac은 빌드용 소스만 제공하며 실제 기기 검증 전입니다.",
     icon:"assets/icons/rawbaker.png",
-    shots:["assets/shots/rawbaker-1.png"],
-    version:"BETA Ver-0.1", status:"베타",
-    platforms:[{os:"Windows 10/11 64-bit", note:""}],
+    shots:[],
+    version:"Editor 0.25 Preview", status:"베타",
+    platforms:[{os:"Windows 10/11 64-bit", note:"기기 테스트용"},{os:"macOS", note:"소스 제공 · 앱 미검증"}],
     tech:"Python · PyQt5", requirements:"Windows 10/11 64-bit",
-    repo:"RawBaker"
+    repo:"RawBaker",
+    download:"https://github.com/VULCAN-HUB/RawBaker/releases/download/v0.25-editor-preview/RawBaker-Editor-0.25-Windows-x64.zip",
+    downloadLabel:"Windows ZIP 다운로드 ↓",
+    sourceDownload:"https://github.com/VULCAN-HUB/RawBaker/releases/download/v0.25-editor-preview/RawBaker-Editor-0.25-source.zip",
+    guide:"https://github.com/VULCAN-HUB/RawBaker/blob/main/DEVICE-TEST.md"
   },
   {
     id:"pickone", name:"PickOne",
