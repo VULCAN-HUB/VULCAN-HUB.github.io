@@ -1,5 +1,19 @@
 window.PROGRAMS = [
   {
+    id:"onelink", name:"ONE LINK",
+    tagline:"기존 Tailscale에서 간편한 파일 공유",
+    description:"테스트 중인 공개 베타입니다. 이미 연결된 Tailscale 기기 사이에서 파일·폴더를 보내고, 허용한 공유 폴더에서 자료를 가져옵니다. Windows 설치형 제공. 실제 다중 PC·Mac·대용량 장기 검증은 진행 전입니다.",
+    icon:"assets/icons/onelink.png",
+    shots:[],
+    version:"0.1.3-beta.1 · 테스트 중", status:"테스트 중",
+    platforms:[{os:"Windows x64", note:"공개 테스트"}],
+    tech:"Electron · Node.js", requirements:"Windows x64 · 기존 Tailscale 연결 · NTFS 수신 저장소",
+    repo:"OneLink",
+    download:"https://github.com/VULCAN-HUB/OneLink/releases/download/v0.1.3-beta.1/ONE-LINK-Setup-0.1.3-beta.1-x64.exe",
+    downloadLabel:"Windows 테스트판 다운로드 ↓",
+    guide:"https://github.com/VULCAN-HUB/OneLink/blob/main/DEVICE-TEST.md"
+  },
+  {
     id:"logmapping", name:"LogMapping",
     tagline:"오프라인 드라이브 파일 카탈로그",
     description:"드라이브를 스캔해 오프라인에서도 파일 검색·색상 태그·CSV 내보내기. 여러 드라이브를 담은 단일 HTML 뷰어로 PC 브라우저에서 검색. APFS·HFS+ 맥 드라이브 읽기, 볼륨 식별 기반 관리. 40개 논리 드라이브·640만 건 합성 자료 시험 통과, 실물 검증 진행 전.",

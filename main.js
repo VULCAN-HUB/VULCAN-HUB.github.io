@@ -13,7 +13,7 @@
 
 function setHref(id, url){var e=document.getElementById(id); if(e) e.href=url;}
 
-function statusClass(s){return s==="정식"?"good":s==="베타"?"warn":"hold";}
+function statusClass(s){return s==="정식"?"good":(s==="베타"||s==="테스트 중")?"warn":"hold";}
 
 function renderCatalog(){
   var grid=document.getElementById("program-grid");
