@@ -134,7 +134,7 @@ a:hover{color:var(--accent-hover)}
 .md-desc{color:var(--body);margin:0 0 18px}
 .md-spec{display:grid;grid-template-columns:90px 1fr;gap:8px 14px;font-size:14px;margin:0 0 22px}
 .md-spec dt{color:var(--muted)} .md-spec dd{margin:0;color:var(--ink)}
-.md-actions{display:flex;gap:10px}
+.md-actions{display:flex;gap:10px;flex-wrap:wrap}
 /* update history in modal */
 .md-updates{margin-top:24px;border-top:1px solid var(--line);padding-top:18px}
 .md-uh{margin:0 0 12px;font-size:14px;font-family:var(--sans);color:var(--ink);font-weight:700}

@@ -44,17 +44,20 @@ window.openDetail=function(id){
     +'<h3 id="md-name" class="md-name">'+p.name+' <span class="badge '+statusClass(p.status)+'">'+p.status+'</span></h3>'
     +'<p class="md-tag">'+p.tagline+'</p>'
     +((p.shots&&p.shots.length)?'<img class="md-shot" src="'+p.shots[0]+'" alt="'+p.name+' 실행 화면" onerror="this.remove()">':'')
-    +'<p class="md-desc">'+p.description+'</p>'
+    +'<p class="md-desc">'+esc(p.intro||p.description)+'</p>'
+    +'<h4>기능</h4><ul>'+p.features.map(function(f){return '<li>'+esc(f)+'</li>';}).join('')+'</ul>'
+    +'<h4>요구사항과 상태</h4>'
     +'<dl class="md-spec">'
     +'<dt>버전</dt><dd class="mono">'+p.version+'</dd>'
     +'<dt>플랫폼</dt><dd>'+p.platforms.map(function(x){return x.os+(x.note?" ("+x.note+")":"");}).join(", ")+'</dd>'
     +'<dt>요구사항</dt><dd>'+p.requirements+'</dd>'
-    +'<dt>기술</dt><dd>'+p.tech+'</dd>'
+    +'<dt>배포 형태</dt><dd>'+esc(p.distribution)+'</dd>'
     +'</dl>'
+    +'<p class="md-desc">'+esc(p.validation)+'</p>'
     +'<div class="md-actions">'
     +'<a class="btn btn-accent" data-dl="'+p.repo+'" '+dlAttrs(p)+'>'+esc(p.downloadLabel||'다운로드 ↓')+'</a>'
     +(p.sourceDownload?'<a class="btn btn-ghost" href="'+esc(p.sourceDownload)+'">Mac 빌드용 / 소스 ZIP</a>':'')
-    +(p.guide?'<a class="btn btn-ghost" href="'+esc(p.guide)+'" target="_blank" rel="noopener">기기 테스트 안내</a>':'')
+    +(p.guide?'<a class="btn btn-ghost" href="'+esc(p.guide)+'" target="_blank" rel="noopener">사용 안내</a>':'')
     +'<a class="btn btn-ghost" href="'+window.LINKS.issuesUrl(p.repo)+'" target="_blank" rel="noopener">오류 신고</a>'
     +'</div>'
     +'<div class="md-updates"><h4 class="md-uh">업데이트 내역</h4><div id="md-rel" class="md-rel"><p class="rel-empty">불러오는 중…</p></div></div>';
