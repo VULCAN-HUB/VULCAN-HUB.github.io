@@ -66,10 +66,10 @@ window.PROGRAMS = [
     "id": "rawbaker",
     "name": "RawBaker",
     "tagline": "사진 일괄 변환·비파괴 보정·레이어 디자인",
-    "description": "사진 여러 장의 일괄 변환부터 개별 사진 보정과 레이어 디자인까지 한곳에서 작업하는 로컬 데스크톱 앱입니다. Windows ZIP을 제공합니다. 개발 PC에서 RAW·문서 출력을 확인했으며 다른 Windows PC·macOS는 미검증입니다.",
+    "description": "일괄 사진 변환·보정·레이어 디자인을 지원하는 테스트 버전입니다. 공통 브랜드 About, Discord 및 앱 내 업데이트 확인·검증 다운로드를 제공합니다. Windows ZIP 자동 설치와 macOS 실행은 아직 지원·검증 전입니다.",
     "icon": "assets/icons/rawbaker.png",
     "shots": [],
-    "version": "v0.25-editor-preview",
+    "version": "v0.27.0-editor-preview",
     "status": "테스트 중",
     "platforms": [
       {
@@ -80,17 +80,18 @@ window.PROGRAMS = [
     "tech": "Python · PyQt5",
     "requirements": "Windows 10/11 x64 · 배포 ZIP 사용 시 Python 설치 불필요",
     "repo": "RawBaker",
-    "download": "https://github.com/VULCAN-HUB/RawBaker/releases/download/v0.25-editor-preview/RawBaker-Editor-0.25-Windows-x64.zip",
+    "download": "https://github.com/VULCAN-HUB/RawBaker/releases/download/v0.27.0-editor-preview/RawBaker-Editor-0.27-Windows-x64.zip",
     "downloadLabel": "Windows ZIP 다운로드 ↓",
-    "sourceDownload": "https://github.com/VULCAN-HUB/RawBaker/releases/download/v0.25-editor-preview/RawBaker-Editor-0.25-source.zip",
+    "sourceDownload": "https://github.com/VULCAN-HUB/RawBaker/releases/download/v0.27.0-editor-preview/RawBaker-Editor-0.27-source.zip",
     "guide": "https://github.com/VULCAN-HUB/RawBaker/blob/main/DEVICE-TEST.md",
     "intro": "사진 여러 장의 일괄 변환부터 개별 사진 보정과 레이어 디자인까지 한곳에서 작업하는 로컬 데스크톱 앱입니다.",
     "features": [
       "비파괴 사진 보정과 여러 사진의 일괄 출력을 지원합니다.",
       "여러 문서와 사진·텍스트·도형 레이어, 마스크·변형을 다룹니다.",
-      "실행 취소·다시 실행과 프로젝트 저장·복구를 지원합니다."
+      "실행 취소·다시 실행과 프로젝트 저장·복구를 지원합니다.",
+      "브랜드 About·Discord·글꼴 라이선스와 사용자 주도 업데이트 확인·검증 다운로드를 제공합니다."
     ],
-    "validation": "개발 Windows PC에서 실제 RAW 9기종과 45MP 문서 출력을 확인했습니다. 다른 Windows PC·macOS·외부 Photoshop/Photon PSD 교환은 미검증입니다. RAW 지원은 카메라와 압축 방식에 따라 다를 수 있습니다.",
+    "validation": "Windows 회귀 검사 320개 및 실행 파일 한글·영문 각각 34개 검사를 통과한 Preview입니다. ZIP 자동 설치·재시작과 macOS 앱은 아직 지원·검증 전이며, 일부 손상 프로젝트 오류는 영어 UI에서도 한국어로 표시될 수 있습니다.",
     "distribution": "Windows ZIP · macOS 빌드용 소스 제공, 앱 미검증"
   },
   {
