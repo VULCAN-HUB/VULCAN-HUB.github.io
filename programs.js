@@ -39,7 +39,7 @@ window.PROGRAMS = [
     "shots": [
       "assets/shots/logmapping-1.png"
     ],
-    "version": "v0.2.4-beta",
+    "version": "v0.2.5-beta.5",
     "status": "테스트 중",
     "platforms": [
       {
@@ -48,18 +48,19 @@ window.PROGRAMS = [
       }
     ],
     "tech": "C#",
-    "requirements": "Windows 10/11 x64 · WebView2 런타임 · 관리자 권한",
+    "requirements": "Windows 10/11 x64 · WebView2 런타임 · 관리자 권한은 Mac 드라이브 스캔 때만",
     "repo": "LogMapping",
-    "download": "https://github.com/VULCAN-HUB/LogMapping/releases/download/v0.2.4-beta/LogMapping.exe",
+    "download": "https://github.com/VULCAN-HUB/LogMapping/releases/download/v0.2.5-beta.5/LogMapping.exe",
     "intro": "드라이브의 파일 목록을 저장해, 드라이브를 분리한 뒤에도 파일명·경로·확장자로 검색하는 데스크톱 앱입니다.",
     "features": [
       "파일 목록 검색, 색상 태그와 드라이브 정보 관리를 지원합니다.",
       "CSV와 단일 HTML 뷰어로 카탈로그를 내보냅니다.",
-      "Windows에서 APFS·HFS+ 드라이브를 읽고 볼륨 식별 정보로 관리합니다."
+      "Windows에서 APFS·HFS+ 드라이브를 읽고 볼륨 식별 정보로 관리합니다.",
+      "DB 최적화로 큰 카탈로그의 검색·내보내기를 빠르게 하고, 앱 안에서 베타 업데이트를 확인합니다."
     ],
-    "validation": "40개 논리 드라이브·640만 건 합성 자료 시험과 PC 브라우저 검색을 확인했습니다. 실물 외장 디스크·macOS 포맷 드라이브와 휴대폰 성능은 추가 검증이 필요합니다.",
+    "validation": "자동 시험과 파일 341만 개 카탈로그에서의 검색·내보내기·최적화를 확인했습니다. 40개 논리 드라이브·640만 건 합성 자료 시험은 최적화·권한 변경 이전 코드로 통과했습니다. 관리자 권한으로 다시 시작한 뒤의 macOS 포맷 드라이브 스캔, 실물 외장 디스크와 휴대폰 성능은 추가 검증이 필요합니다.",
     "distribution": "Windows 단일 EXE · 설치 불필요",
-    "guide": "https://github.com/VULCAN-HUB/LogMapping/blob/main/README.md#사용법",
+    "guide": "https://github.com/VULCAN-HUB/LogMapping/blob/release/v0.2.5-beta.5/README.md#사용법",
     "downloadLabel": "Windows 테스트판 다운로드 ↓"
   },
   {
