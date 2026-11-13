@@ -6,7 +6,7 @@ window.PROGRAMS = [
     "description": "기존 Tailscale 네트워크에 연결된 기기 사이에서 파일·폴더를 공유하는 데스크톱 앱입니다. ONE LINK 회원가입이나 별도 운영 서버 없이 사용합니다. Windows 설치형을 제공합니다. 실제 다중 PC·macOS·대용량·장시간 사용은 추가 검증이 필요합니다.",
     "icon": "assets/icons/onelink.png",
     "shots": [],
-    "version": "v0.1.3-beta.1",
+    "version": "Beta-Ver.0.1.3",
     "status": "테스트 중",
     "platforms": [
       {
@@ -17,7 +17,7 @@ window.PROGRAMS = [
     "tech": "Electron · Node.js",
     "requirements": "Windows x64 · 기존 Tailscale 연결 · NTFS 수신 저장소",
     "repo": "OneLink",
-    "download": "https://github.com/VULCAN-HUB/OneLink/releases/download/v0.1.3-beta.1/ONE-LINK-Setup-0.1.3-beta.1-x64.exe",
+    "download": "https://github.com/VULCAN-HUB/OneLink/releases/download/Beta-Ver.0.1.3/ONE-LINK-Setup-Beta-Ver.0.1.3-x64.exe",
     "downloadLabel": "Windows 테스트판 다운로드 ↓",
     "guide": "https://github.com/VULCAN-HUB/OneLink/blob/main/DEVICE-TEST.md",
     "intro": "기존 Tailscale 네트워크에 연결된 기기 사이에서 파일·폴더를 공유하는 데스크톱 앱입니다. ONE LINK 회원가입이나 별도 운영 서버 없이 사용합니다.",
@@ -39,7 +39,7 @@ window.PROGRAMS = [
     "shots": [
       "assets/shots/logmapping-1.png"
     ],
-    "version": "v0.2.5-beta.5",
+    "version": "Beta-Ver.0.2.7",
     "status": "테스트 중",
     "platforms": [
       {
@@ -50,7 +50,7 @@ window.PROGRAMS = [
     "tech": "C#",
     "requirements": "Windows 10/11 x64 · WebView2 런타임 · 관리자 권한은 Mac 드라이브 스캔 때만",
     "repo": "LogMapping",
-    "download": "https://github.com/VULCAN-HUB/LogMapping/releases/download/v0.2.5-beta.5/LogMapping.exe",
+    "download": "https://github.com/VULCAN-HUB/LogMapping/releases/download/Beta-Ver.0.2.7/LogMapping.exe",
     "intro": "드라이브의 파일 목록을 저장해, 드라이브를 분리한 뒤에도 파일명·경로·확장자로 검색하는 데스크톱 앱입니다.",
     "features": [
       "파일 목록 검색, 색상 태그와 드라이브 정보 관리를 지원합니다.",
@@ -60,7 +60,7 @@ window.PROGRAMS = [
     ],
     "validation": "자동 시험과 파일 341만 개 카탈로그에서의 검색·내보내기·최적화를 확인했습니다. 40개 논리 드라이브·640만 건 합성 자료 시험은 최적화·권한 변경 이전 코드로 통과했습니다. 관리자 권한으로 다시 시작한 뒤의 macOS 포맷 드라이브 스캔, 실물 외장 디스크와 휴대폰 성능은 추가 검증이 필요합니다.",
     "distribution": "Windows 단일 EXE · 설치 불필요",
-    "guide": "https://github.com/VULCAN-HUB/LogMapping/blob/release/v0.2.5-beta.5/README.md#사용법",
+    "guide": "https://github.com/VULCAN-HUB/LogMapping/blob/main/README.md#사용법",
     "downloadLabel": "Windows 테스트판 다운로드 ↓"
   },
   {
@@ -70,7 +70,7 @@ window.PROGRAMS = [
     "description": "일괄 사진 변환·보정·레이어 디자인을 지원하는 테스트 버전입니다. 공통 브랜드 About, Discord 및 앱 내 업데이트 확인·검증 다운로드를 제공합니다. Windows ZIP 자동 설치와 macOS 실행은 아직 지원·검증 전입니다.",
     "icon": "assets/icons/rawbaker.png",
     "shots": [],
-    "version": "v0.27.0-editor-preview",
+    "version": "Beta-Ver.0.27.0",
     "status": "테스트 중",
     "platforms": [
       {
@@ -81,9 +81,9 @@ window.PROGRAMS = [
     "tech": "Python · PyQt5",
     "requirements": "Windows 10/11 x64 · 배포 ZIP 사용 시 Python 설치 불필요",
     "repo": "RawBaker",
-    "download": "https://github.com/VULCAN-HUB/RawBaker/releases/download/v0.27.0-editor-preview/RawBaker-Editor-0.27-Windows-x64.zip",
+    "download": "https://github.com/VULCAN-HUB/RawBaker/releases/download/Beta-Ver.0.27.0/RawBaker-Editor-Beta-Ver.0.27.0-Windows-x64.zip",
     "downloadLabel": "Windows ZIP 다운로드 ↓",
-    "sourceDownload": "https://github.com/VULCAN-HUB/RawBaker/releases/download/v0.27.0-editor-preview/RawBaker-Editor-0.27-source.zip",
+    "sourceDownload": "https://github.com/VULCAN-HUB/RawBaker/releases/download/Beta-Ver.0.27.0/RawBaker-Editor-Beta-Ver.0.27.0-source.zip",
     "guide": "https://github.com/VULCAN-HUB/RawBaker/blob/main/DEVICE-TEST.md",
     "intro": "사진 여러 장의 일괄 변환부터 개별 사진 보정과 레이어 디자인까지 한곳에서 작업하는 로컬 데스크톱 앱입니다.",
     "features": [
@@ -104,7 +104,7 @@ window.PROGRAMS = [
     "shots": [
       "assets/shots/pickone-1.png"
     ],
-    "version": "v0.1-beta",
+    "version": "Beta-Ver.0.1.0",
     "status": "테스트 중",
     "platforms": [
       {
@@ -124,7 +124,7 @@ window.PROGRAMS = [
     "validation": "첫 공개 베타입니다. 공개 문서에 별도의 기기별 검증 결과가 명시되어 있지 않습니다. 영상은 지원하지 않으며 RAW는 임베디드 미리보기를 추출합니다.",
     "distribution": "Windows 단일 EXE · macOS 준비 중",
     "guide": "https://github.com/VULCAN-HUB/PickOne/blob/main/docs/PickOne_사용법.md",
-    "download": "https://github.com/VULCAN-HUB/PickOne/releases/download/v0.1-beta/PickOne.exe",
+    "download": "https://github.com/VULCAN-HUB/PickOne/releases/download/Beta-Ver.0.1.0/PickOne.exe",
     "downloadLabel": "Windows 테스트판 다운로드 ↓"
   },
   {
@@ -134,7 +134,7 @@ window.PROGRAMS = [
     "description": "메모리카드의 촬영본을 여러 위치로 복사하고, SHA-256 해시로 원본과 복사본을 대조하는 데스크톱 앱입니다. Windows 포터블을 제공합니다. 아주 큰 단일 파일 처리에 한계가 있으며 카드 제거 감지는 미구현입니다.",
     "icon": "assets/icons/backupsafe.png",
     "shots": [],
-    "version": "v0.1-beta",
+    "version": "Beta-Ver.0.1.0",
     "status": "테스트 중",
     "platforms": [
       {
@@ -155,7 +155,7 @@ window.PROGRAMS = [
     "validation": "첫 공개 베타입니다. 아주 큰 단일 파일 처리에 알려진 한계가 있으며 카드 제거 감지는 미구현입니다. 검증 안내는 해당 시점의 복사본 대조 결과를 뜻합니다.",
     "distribution": "Windows 포터블 EXE · macOS 준비 중",
     "guide": "https://github.com/VULCAN-HUB/BackupSafe/blob/main/README.md#사용법",
-    "download": "https://github.com/VULCAN-HUB/BackupSafe/releases/download/v0.1-beta/BackupSafe-0.1.0-portable.exe",
+    "download": "https://github.com/VULCAN-HUB/BackupSafe/releases/download/Beta-Ver.0.1.0/BackupSafe-Beta-Ver.0.1.0-portable.exe",
     "downloadLabel": "Windows 테스트판 다운로드 ↓"
   },
   {
@@ -167,7 +167,7 @@ window.PROGRAMS = [
     "shots": [
       "assets/shots/snapstamp-1.png"
     ],
-    "version": "v0.2-beta",
+    "version": "Beta-Ver.0.2.0",
     "status": "테스트 중",
     "platforms": [
       {
@@ -188,7 +188,7 @@ window.PROGRAMS = [
     "validation": "실카메라 촬영·합성·QR 수령과 연속 사용을 확인한 베타입니다. 실제 행사 전 사용할 카메라·네트워크로 사전 테스트가 필요합니다. QR 링크는 앱 실행 중에만 유효합니다.",
     "distribution": "Windows ZIP 권장 · 단일 EXE 별도 제공 · macOS 준비 중",
     "guide": "https://github.com/VULCAN-HUB/SnapStamp/blob/main/README.md#사용법",
-    "download": "https://github.com/VULCAN-HUB/SnapStamp/releases/download/v0.2-beta/SnapStamp.zip",
+    "download": "https://github.com/VULCAN-HUB/SnapStamp/releases/download/Beta-Ver.0.2.0/SnapStamp.zip",
     "downloadLabel": "Windows ZIP 다운로드 ↓"
   }
 ];
